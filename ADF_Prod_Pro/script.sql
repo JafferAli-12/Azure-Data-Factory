@@ -1,4 +1,4 @@
-CREATE TABLE Orders (
+CREATE TABLE source.Orders (
     order_id INT PRIMARY KEY,
     customer_name VARCHAR(100),
     product_name VARCHAR(100),
@@ -10,7 +10,7 @@ CREATE TABLE Orders (
 
 
 -- INITIAL
-INSERT INTO Orders (order_id, customer_name, product_name, quantity, price, order_date, last_updated)
+INSERT INTO source.Orders (order_id, customer_name, product_name, quantity, price, order_date, last_updated)
 VALUES
 (1, 'John Doe', 'Laptop', 1, 1200.00, '2025-09-20', '2025-09-20 10:15:00'),
 (2, 'Alice Smith', 'Phone', 2, 800.00, '2025-09-21', '2025-09-21 14:30:00'),
@@ -25,7 +25,7 @@ VALUES
 
 
 -- INCREMENTAL
-INSERT INTO Orders (order_id, customer_name, product_name, quantity, price, order_date, last_updated)
+INSERT INTO source.Orders (order_id, customer_name, product_name, quantity, price, order_date, last_updated)
 VALUES
 (11, 'Jack Miller', 'Drone', 1, 1500.00, '2025-09-26', '2025-09-26 10:00:00'),
 (12, 'Kelly Green', 'Speakers', 2, 180.00, '2025-09-26', '2025-09-26 14:45:00'),
